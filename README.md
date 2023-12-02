@@ -2,10 +2,11 @@
 
 Color Say is a simple but useful plugin for CS2 based on the awesome CounterStrikeSharp by roflmuffin. 
 
-Color your message by using following placeholders using the server console command ```csay`````` or ```colorsay```
+Color your message by using following placeholders using the server console command ```csay``` or ```colorsay```
 
 *Colors*
-```{default}
+```
+{default}
 {white} 
 {darkred}
 {lightpurple}
@@ -15,16 +16,19 @@ Color your message by using following placeholders using the server console comm
 {red} 
 {grey} 
 {yellow}
-{invisible}"
+{invisible}
 {lightblue}
 {blue}
 {purple} 
 {pink}
 {fadedred}
-{gold}```
+{gold}
+```
 
 *Examples*
-```csay "{lightgreen}LADMIN:{blue} Blue text here {default} Default colored text here"``````
+```
+csay "{lightgreen}ADMIN:{blue} Blue text here {default} Default colored text here"
+```
 
 Feel free to contribute and maintain it. It is intended to be light weight.
 
