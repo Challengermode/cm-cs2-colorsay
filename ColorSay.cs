@@ -100,7 +100,8 @@ public class ColorSay : BasePlugin
             // If the color code is not found, leave it unchanged
             return match.Value;
         });
-        return $"{replaced}";
+        // Non-breaking space - a little hack to get all colors to show
+        return $"\xA0{replaced}";
     }
 }
 
