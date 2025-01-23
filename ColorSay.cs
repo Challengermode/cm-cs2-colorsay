@@ -9,7 +9,7 @@ public class ColorSay : BasePlugin
 {
     public override string ModuleName => "CMod Color Say";
     public override string ModuleAuthor => "chte @ Challengermode";
-    public override string ModuleVersion => "0.0.1";
+    public override string ModuleVersion => "1.0.0";
 
     /// <summary>
     /// Loads the Color Say module.
@@ -45,8 +45,7 @@ public class ColorSay : BasePlugin
             }
 
             Server.PrintToChatAll(GetColoredText(message));
-            Server.PrintToConsole(GetColoredText(message));
-
+            NativeAPI.PrintToServerConsole($"{GetColoredText(message)}\n\0");
         }
         catch (Exception ex)
         {
@@ -70,7 +69,7 @@ public class ColorSay : BasePlugin
             { "{default}", 1 },
             { "{white}", 1 },
             { "{darkred}", 2 },
-            { "{lightpurple}", 3},
+            { "{purple}", 3},
             { "{green}", 4 },
             { "{lightgreen}", 5 },
             { "{slimegreen}", 6 },
@@ -80,7 +79,7 @@ public class ColorSay : BasePlugin
             { "{invisible}", 10 },
             { "{lightblue}", 11 },
             { "{blue}", 12 },
-            { "{purple}", 13 },
+            { "{lightpurple}", 13 },
             { "{pink}", 14 },
             { "{fadedred}", 15 },
             { "{gold}", 16 },
@@ -101,7 +100,7 @@ public class ColorSay : BasePlugin
             return match.Value;
         });
         // Non-breaking space - a little hack to get all colors to show
-        return $"\xA0{replaced}";
+        return $"\u200B{replaced}";
     }
 }
 
